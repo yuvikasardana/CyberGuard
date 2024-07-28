@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="CyberGuard"
+run/main_scene="res://scenes/player.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://assets/icon.svg"
 
+[display]
+
+window/stretch/scale=4.02
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
