@@ -12345,8 +12345,6 @@ layer_0/tile_data = PackedInt32Array(-1703940, 262151, 5, -1638404, 262151, 6, -
 [node name="player" parent="." instance=ExtResource("13_v7ic7")]
 position = Vector2(-209, -93)
 scale = Vector2(3, 3)
-collision_layer = 2
-collision_mask = 2
 
 [node name="collisions" type="StaticBody2D" parent="."]
 
@@ -12355,8 +12353,6 @@ polygon = PackedVector2Array(-519, -382, -180, -382, -174, -530, 178, -532, 175,
 
 [node name="forest_entry" type="Area2D" parent="."]
 position = Vector2(1, 3)
-collision_layer = 2
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="forest_entry"]
 position = Vector2(-1, -458.25)
@@ -12371,4 +12367,3 @@ shape = SubResource("RectangleShape2D_xks77")
 
 [connection signal="body_entered" from="forest_entry" to="." method="_on_forest_entry_body_entered"]
 [connection signal="body_exited" from="forest_entry" to="." method="_on_forest_entry_body_exited"]
-[connection signal="body_shape_entered" from="forest_entry" to="." method="_on_forest_entry_body_shape_entered"]
