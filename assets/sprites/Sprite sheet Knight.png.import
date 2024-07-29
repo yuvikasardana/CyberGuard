@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://plo3x4gc2rcf"
-path="res://.godot/imported/heroes_forms.png-4a6b686090f5c548efea9d1affc723b7.ctex"
+uid="uid://cnjvpq3s73wjl"
+path="res://.godot/imported/Sprite sheet Knight.png-47fec68f9b19cbc0767c7cc5685e6967.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/heroes_forms.png"
-dest_files=["res://.godot/imported/heroes_forms.png-4a6b686090f5c548efea9d1affc723b7.ctex"]
+source_file="res://assets/sprites/Sprite sheet Knight.png"
+dest_files=["res://.godot/imported/Sprite sheet Knight.png-47fec68f9b19cbc0767c7cc5685e6967.ctex"]
 
 [params]
 

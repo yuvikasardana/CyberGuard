@@ -17,7 +17,7 @@ config/icon="res://assets/icon.svg"
 
 [display]
 
-window/stretch/scale=4.02
+window/stretch/scale=6.69
 
 [rendering]
 
