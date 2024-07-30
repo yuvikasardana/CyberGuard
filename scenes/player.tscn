@@ -386,7 +386,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7m22b"]
-radius = 11.4018
+radius = 7.0
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(1, 0)
@@ -399,7 +399,8 @@ frame = 1
 frame_progress = 0.312364
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 1)
+position = Vector2(-1, 5)
+scale = Vector2(1.00301, 1.02576)
 shape = SubResource("CircleShape2D_7m22b")
 
 [node name="Camera2D" type="Camera2D" parent="."]
