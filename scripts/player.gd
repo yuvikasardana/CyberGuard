@@ -10,6 +10,7 @@ func _ready():
 
 func _physics_process(delta):
 	player_movement(delta)
+	current_camera()
 	
 func player():
 	pass
@@ -74,5 +75,14 @@ func play_anim(movement):
 			anim.play("back_walk")
 		elif movement == 0:
 			anim.play("back_idle")
+			
+func current_camera():
+	if Global.current_scene == "world":
+		$World_camera.enabled = true
+		$forest_camera.enabled = false
+	elif Global.current_scene == "forest":
+		$World_camera.enabled = false
+		$forest_camera.enabled = true
+		
 		
 
