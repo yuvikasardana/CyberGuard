@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://lyam5elfovgq"]
+[gd_scene load_steps=34 format=3 uid="uid://lyam5elfovgq"]
 
 [ext_resource type="Texture2D" uid="uid://d341uj8xb766k" path="res://assets/map samples/sample 1.png" id="1_d8kcb"]
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_gscew"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://blkmwv6ko3b3u" path="res://assets/48x48 resize/gentle forest (48x48 resize) v02.png" id="12_30twb"]
 [ext_resource type="Texture2D" uid="uid://3qqi4pxy3ywb" path="res://assets/48x48 resize/gentle forest (48x48 resize) v03.png" id="13_4cugb"]
 [ext_resource type="PackedScene" uid="uid://ciwmq0et1d1d4" path="res://scenes/player.tscn" id="13_v7ic7"]
+[ext_resource type="PackedScene" uid="uid://bpwi0xbt7xeej" path="res://pause_button.tscn" id="16_ltufj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gpp6f"]
 texture = ExtResource("1_d8kcb")
@@ -37211,6 +37212,14 @@ one_way_collision_margin = 29.8
 position = Vector2(-2.5, -452)
 scale = Vector2(0.982746, 1)
 shape = SubResource("RectangleShape2D_xks77")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pause button" parent="CanvasLayer" instance=ExtResource("16_ltufj")]
+offset_left = 416.0
+offset_top = 329.0
+offset_right = 419.0
+offset_bottom = 318.0
 
 [connection signal="body_entered" from="forest_entry" to="." method="_on_forest_entry_body_entered"]
 [connection signal="body_exited" from="forest_entry" to="." method="_on_forest_entry_body_exited"]
