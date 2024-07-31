@@ -1,7 +1,8 @@
-[gd_scene load_steps=43 format=3 uid="uid://bn0nqw2vnivui"]
+[gd_scene load_steps=44 format=3 uid="uid://bn0nqw2vnivui"]
 
 [ext_resource type="Texture2D" uid="uid://bg2qcs8m1jgbb" path="res://assets/sprites/Char_006_Battler.png" id="1_c40t0"]
 [ext_resource type="Texture2D" uid="uid://crmox2nyae30d" path="res://assets/sprites/Char_006_Idle.png" id="1_les8a"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_wr5jg"]
 [ext_resource type="Texture2D" uid="uid://bt5gtwhy8pi04" path="res://assets/sprites/Char_006.png" id="3_385h7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3tih0"]
@@ -314,6 +315,11 @@ animations = [{
 }]
 
 [node name="enemy" type="CharacterBody2D"]
+script = ExtResource("1_wr5jg")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_c3ovp")
