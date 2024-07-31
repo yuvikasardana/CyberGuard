@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://sjarhmgdgcub"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_kvrp0"]
+
+[node name="Signboard" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("ImageTexture_kvrp0")
+region_enabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
