@@ -37281,6 +37281,14 @@ position = Vector2(-2.5, -452)
 scale = Vector2(0.982746, 1)
 shape = SubResource("RectangleShape2D_xks77")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pause button" parent="CanvasLayer" instance=ExtResource("16_ltufj")]
+offset_left = 416.0
+offset_top = 329.0
+offset_right = 419.0
+offset_bottom = 318.0
+
 [connection signal="body_entered" from="forest_entry" to="." method="_on_forest_entry_body_entered"]
 [connection signal="body_exited" from="forest_entry" to="." method="_on_forest_entry_body_exited"]
 [connection signal="body_shape_entered" from="forest_entry" to="." method="_on_forest_entry_body_shape_entered"]
