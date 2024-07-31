@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://c528j548ps0mt"]
+
+[ext_resource type="Script" path="res://scripts/textbox.gd" id="1_u3doc"]
+[ext_resource type="FontFile" uid="uid://5ehy5yosdsgi" path="res://assets/fonts/MEGAMAN10.ttf" id="2_5g27i"]
+[ext_resource type="FontFile" uid="uid://djwlaert8c5ou" path="res://assets/fonts/ChiKareGo2.ttf" id="3_y6ajw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhsnn"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_wdj4t"]
+font = ExtResource("3_y6ajw")
+font_size = 28
+
+[node name="Textbox" type="CanvasLayer"]
+script = ExtResource("1_u3doc")
+
+[node name="TextboxContainer" type="MarginContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = -175.0
+offset_right = -23.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="TextboxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nhsnn")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(4, 2)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.72
+theme_override_fonts/font = ExtResource("2_5g27i")
+theme_override_font_sizes/font_size = 31
+text = "text i am gonna bite our tognjt lalalaalalalalalaaaaaaaaaaaa"
+label_settings = SubResource("LabelSettings_wdj4t")
+autowrap_mode = 1
+clip_text = true
