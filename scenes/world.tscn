@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://blkmwv6ko3b3u" path="res://assets/48x48 resize/gentle forest (48x48 resize) v02.png" id="12_30twb"]
 [ext_resource type="Texture2D" uid="uid://3qqi4pxy3ywb" path="res://assets/48x48 resize/gentle forest (48x48 resize) v03.png" id="13_4cugb"]
 [ext_resource type="PackedScene" uid="uid://ciwmq0et1d1d4" path="res://scenes/player.tscn" id="13_v7ic7"]
-[ext_resource type="PackedScene" uid="uid://bpwi0xbt7xeej" path="res://pause_button.tscn" id="16_ltufj"]
+[ext_resource type="PackedScene" path="res://pause_button.tscn" id="16_ltufj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gpp6f"]
 texture = ExtResource("1_d8kcb")
