@@ -386,7 +386,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7m22b"]
-radius = 7.0
+radius = 3.988
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(1, 0)
@@ -397,9 +397,11 @@ sprite_frames = SubResource("SpriteFrames_weg31")
 animation = &"front_idle"
 frame = 1
 frame_progress = 0.312364
+offset = Vector2(0, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 5)
+y_sort_enabled = true
+position = Vector2(-1, 1)
 scale = Vector2(1.00301, 1.02576)
 shape = SubResource("CircleShape2D_7m22b")
 
@@ -416,11 +418,11 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="forest_camera" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
-limit_left = -849
-limit_top = -1321
-limit_right = 843
-position_smoothing_enabled = true
+zoom = Vector2(3, 3)
+limit_left = -284
+limit_top = -204
+limit_right = 811
+limit_bottom = 400
 rotation_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true

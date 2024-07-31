@@ -1,6 +1,6 @@
 extends Node2D
 
-const ForestScene = "res://scenes/forest.tscn"
+const ForestScene = "res://scenes/forest1.tscn"
 
 func _ready():
 	#$forest_entry.body_entered.connect(_on_forest_entry_body_entered)
@@ -26,7 +26,7 @@ func change_scene():
 	
 	if Global.transition_scene == true:
 		if Global.current_scene == "world":
-			get_tree().change_scene_to_file("res://scenes/forest.tscn")
+			get_tree().change_scene_to_file("res://scenes/forest1.tscn")
 			Global.finish_changescenes()
 		
 

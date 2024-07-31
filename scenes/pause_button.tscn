@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bpwi0xbt7xeej"]
 
-[ext_resource type="Shader" path="res://pause.gdshader" id="1_2x4rd"]
-[ext_resource type="Script" path="res://pause_button.gd" id="1_lr05y"]
+[ext_resource type="Shader" path="res://scripts/pause.gdshader" id="1_2x4rd"]
+[ext_resource type="Script" path="res://scripts/pause_button.gd" id="1_lr05y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jp48c"]
 
@@ -108,6 +108,7 @@ offset_right = 403.0
 offset_bottom = 128.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_left = -6.0
 offset_top = 14.0
