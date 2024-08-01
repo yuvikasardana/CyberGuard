@@ -2053,3 +2053,7 @@ polygon = PackedVector2Array(-284, -207, 803, -209, 814, 398, -287, 397, -287, -
 [node name="TypedLabel" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="LevelCompletedText" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
