@@ -12,7 +12,7 @@ func assign_name(name: String):
 	enemy_name = name
 	$Label.text = enemy_name
 
-func _process(delta):
+func _process(_delta):
 	var main_character = get_parent().get_node("player")
 	if main_character:
 		var direction = (main_character.global_position - global_position).normalized()

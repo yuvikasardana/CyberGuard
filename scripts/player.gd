@@ -15,7 +15,7 @@ func _physics_process(delta):
 func player():
 	pass
 	
-func player_movement(delta):
+func player_movement(_delta):
 	
 	if Input.is_action_pressed("ui_right"):
 		curr_dir = "left"

@@ -2040,6 +2040,10 @@ collision_mask = 2
 
 [node name="pause button" parent="." instance=ExtResource("6_en73g")]
 z_index = 5
+offset_left = 208.0
+offset_top = 61.0
+offset_right = 208.0
+offset_bottom = 61.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 2

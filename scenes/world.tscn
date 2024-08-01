@@ -36992,10 +36992,10 @@ shape = SubResource("RectangleShape2D_xks77")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="pause button" parent="CanvasLayer" instance=ExtResource("16_ltufj")]
-offset_left = 416.0
-offset_top = 330.0
-offset_right = 419.0
-offset_bottom = 319.0
+offset_left = 355.0
+offset_top = 134.0
+offset_right = 358.0
+offset_bottom = 123.0
 
 [node name="Textbox" parent="." instance=ExtResource("15_v18tk")]
 visible = false
