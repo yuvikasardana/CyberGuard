@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://uosown2mp6u2"]
+[gd_scene load_steps=14 format=3 uid="uid://uosown2mp6u2"]
 
 [ext_resource type="Script" path="res://scripts/forest1.gd" id="1_d7ips"]
 [ext_resource type="Texture2D" uid="uid://bmbrcd3xk6bxu" path="res://assets/gentle sheets/gentle forest v01.png" id="1_q7wos"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dh6u4orpq27qy" path="res://assets/gentle sheets/gentle forest v03.png" id="4_tu4jy"]
 [ext_resource type="PackedScene" uid="uid://ciwmq0et1d1d4" path="res://scenes/player.tscn" id="5_cornc"]
 [ext_resource type="PackedScene" uid="uid://bpwi0xbt7xeej" path="res://scenes/pause_button.tscn" id="6_en73g"]
+[ext_resource type="PackedScene" uid="uid://c528j548ps0mt" path="res://scenes/textbox.tscn" id="8_bpqba"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6f884"]
 texture = ExtResource("1_q7wos")
@@ -2053,3 +2054,5 @@ polygon = PackedVector2Array(-284, -207, 803, -209, 814, 398, -287, 397, -287, -
 [node name="TypedLabel" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Textbox" parent="." instance=ExtResource("8_bpqba")]

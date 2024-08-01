@@ -16,10 +16,18 @@ var text_queue = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hide_textbox() # Replace with function body.
-	queue_text("Excuse me wanderer where can I find the bathroom?")
-	queue_text("Why do we not look like the others?")
-	queue_text("Because we are free assets from opengameart!")
-	queue_text("Thanks for watching!")
+	if(Global.current_scene == "world"):
+		queue_text("Welcome to the kingdom of cyber land")
+		queue_text("Give instructions to your guard to protect your kingdom from bandits")
+		queue_text("The kingdom is divided into three areas for you to protect ")
+		queue_text("For the prototype version only firewall forest is active")
+		queue_text("Explore the area and find your way to the firewall forest to protect your kingdom from being infilterated by bandits")
+		queue_text("All The Best!")
+	if(Global.current_scene =="forest"):
+		queue_text("You have reached the firewall forest")
+		queue_text("This forest imitates setting up a firewall to protect your system from unwanted access")
+		
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
