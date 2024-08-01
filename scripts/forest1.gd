@@ -1,8 +1,8 @@
 extends Node2D
 
-var enemy_names_level_1 = ["enemy1", "enemy2", "enemy3", "enemy4", "enemy5", "enemy6", "enemy7", "enemy8", "enemy9", "enemy10"]
-var enemy_names_level_2 = ["enemy11", "enemy12", "enemy13", "enemy14", "enemy15", "enemy16", "enemy17", "enemy18", "enemy19", "enemy20", "enemy21", "enemy22", "enemy23", "enemy24", "enemy25"]
-var enemy_names_level_3 = ["enemy26", "enemy27", "enemy28", "enemy29", "enemy30", "enemy31", "enemy32", "enemy33", "enemy34", "enemy35", "enemy36", "enemy37", "enemy38", "enemy39", "enemy40"]
+var enemy_names_level_1 = ["ip1", "ip2", "ip3", "ip4", "ip5", "ip6", "ip7", "ip8", "ip9", "ip10"]
+var enemy_names_level_2 = ["ip11", "ip12", "ip13", "ip14", "ip15", "ip16", "ip17", "ip18", "ip19", "ip20", "ip21", "ip22", "ip23", "ip24", "ip25"]
+var enemy_names_level_3 = ["ip26", "ip27", "ip28", "ip29", "ip30", "ip31", "ip32", "ip33", "ip34", "ip35", "ip36", "ip37", "ip38", "ip39", "ip40"]
 
 var enemies = []
 var typed_text: String = ""
@@ -16,7 +16,7 @@ var map_max_y = 1000
 
 func _ready():
 	timer_node = $Timer
-	start_level(current_level)
+	
 
 func start_level(level):
 	match level:
@@ -92,3 +92,7 @@ func check_enemy_names(input_name: String):
 			typed_text = ""  
 			$TypedLabel.text = typed_text
 			break
+
+
+func _on_textbox_textboxes_completed():
+	start_level(current_level)
