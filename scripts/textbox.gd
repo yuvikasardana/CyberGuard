@@ -13,6 +13,8 @@ enum State {
 var current_state = State.READY
 var text_queue = []
 
+signal textboxes_completed
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hide_textbox() # Replace with function body.
@@ -26,6 +28,10 @@ func _ready():
 	if(Global.current_scene =="forest"):
 		queue_text("You have reached the firewall forest")
 		queue_text("This forest imitates setting up a firewall to protect your system from unwanted access")
+		queue_text("The forest is the first line of defense of your kingdom")
+		queue_text("just like you have to command the firewall to block certain ip addresses, command your soldier to block the enemies from getting access to your kingdom")
+		queue_text("Your soldier doesnt know the ip addresses of your enemies ")
+		queue_text("Tell him the ip addresses to help protect your kingdom")
 		
 	
 
@@ -45,6 +51,8 @@ func _process(delta):
 			if Input.is_action_just_pressed("ui_accept"):
 				change_state(State.READY)
 				hide_textbox()
+				if text_queue.size() == 0:
+					emit_signal("textboxes_completed")
 			
 func hide_textbox():
 	label.text = ""

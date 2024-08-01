@@ -2059,8 +2059,6 @@ offset_bottom = 23.0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="LevelCompletedText" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-
 [node name="Textbox" parent="." instance=ExtResource("8_bpqba")]
+
+[connection signal="textboxes_completed" from="Textbox" to="." method="_on_textbox_textboxes_completed"]

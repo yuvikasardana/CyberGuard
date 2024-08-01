@@ -37058,3 +37058,4 @@ label_text = "Password   Fortress"
 [connection signal="body_entered" from="forest_entry" to="." method="_on_forest_entry_body_entered"]
 [connection signal="body_exited" from="forest_entry" to="." method="_on_forest_entry_body_exited"]
 [connection signal="body_shape_entered" from="forest_entry" to="." method="_on_forest_entry_body_shape_entered"]
+[connection signal="textboxes_completed" from="Textbox" to="." method="_on_textbox_textboxes_completed"]
