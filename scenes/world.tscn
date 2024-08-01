@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://lyam5elfovgq"]
+[gd_scene load_steps=37 format=3 uid="uid://lyam5elfovgq"]
 
 [ext_resource type="Texture2D" uid="uid://d341uj8xb766k" path="res://assets/map samples/sample 1.png" id="1_d8kcb"]
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_gscew"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ciwmq0et1d1d4" path="res://scenes/player.tscn" id="13_v7ic7"]
 [ext_resource type="PackedScene" uid="uid://c528j548ps0mt" path="res://scenes/textbox.tscn" id="15_v18tk"]
 [ext_resource type="PackedScene" uid="uid://bpwi0xbt7xeej" path="res://scenes/pause_button.tscn" id="16_ltufj"]
+[ext_resource type="PackedScene" uid="uid://sjarhmgdgcub" path="res://scenes/signboard.tscn" id="18_43wsd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gpp6f"]
 texture = ExtResource("1_d8kcb")
@@ -36953,7 +36954,7 @@ collision_mask = 2
 [node name="outer_col" type="CollisionPolygon2D" parent="collisions"]
 position = Vector2(4.99999, 3.99999)
 scale = Vector2(1.01331, 0.989084)
-polygon = PackedVector2Array(-519, -382, -180, -382, -174, -530, 178, -532, 175, -381, 628, -377, 628, -302, 462.84, -305.333, 421.391, -304.322, 425.339, -124.357, 638, -126, 632, -74, 832, -70, 824, 280, 634, 284, 418, 338, 622, 410, 618, 500, 448, 502, 429.286, 678.406, 163.82, 669.306, 174, 815, -78, 809, -86.8441, 662.229, -523.038, 657.174, -521.065, 378.128, -511.196, 453.955, -503.301, 637.964, -393.759, 634.931, 7.89491, 643.019, -55.2644, 463.055, -104.608, 445.867, -84.8704, 448.9, -77.9623, 425.646, -81.9098, 371.05, -87.831, 324.543, -99.6734, 300.278, -66.12, 258.825, -84.8704, 189.064, -126.319, 144.578, -282.243, 114.247, -321.718, 114.247, -418.431, 191.086, -506.262, 189.064, -512, 284, -676, 284, -674, -16, -498, -24, -512, -352, -816, -132, -840, 312, -810, 476, -416, 833, 316, 859, 854, 507, 918, 73, 920, -398, 272, -654, -338, -656, -555, -382, -517, -364)
+polygon = PackedVector2Array(-519, -382, -180, -382, -89.8047, -365.995, 110.529, -365.995, 175, -381, 628, -377, 628, -302, 462.84, -305.333, 421.391, -304.322, 425.339, -124.357, 638, -126, 632, -74, 636.528, 109.192, 627.646, 205.24, 634, 284, 418, 338, 622, 410, 618, 500, 448, 502, 429.286, 678.406, 163.82, 669.306, 174, 815, -78, 809, -86.8441, 662.229, -523.038, 657.174, -521.065, 378.128, -511.196, 453.955, -503.301, 637.964, -393.759, 634.931, 7.89491, 643.019, -55.2644, 463.055, -104.608, 445.867, -84.8704, 448.9, -77.9623, 425.646, -81.9098, 371.05, -87.831, 324.543, -99.6734, 300.278, -66.12, 258.825, -84.8704, 189.064, -126.319, 144.578, -282.243, 114.247, -321.718, 114.247, -418.431, 191.086, -506.262, 189.064, -512, 284, -520.078, 238.605, -510.209, 113.236, -498, -24, -512, -352, -816, -132, -840, 312, -810, 476, -416, 833, 316, 859, 854, 507, 918, 73, 920, -398, 272, -654, -338, -656, -555, -382, -517, -364)
 
 [node name="world_forest" type="CollisionShape2D" parent="collisions"]
 position = Vector2(187.5, 547.5)
@@ -36992,12 +36993,25 @@ shape = SubResource("RectangleShape2D_xks77")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="pause button" parent="CanvasLayer" instance=ExtResource("16_ltufj")]
-offset_left = 355.0
-offset_top = 134.0
-offset_right = 358.0
-offset_bottom = 123.0
+offset_left = 1139.0
+offset_top = 305.0
+offset_right = 1142.0
+offset_bottom = 294.0
 
 [node name="Textbox" parent="." instance=ExtResource("15_v18tk")]
+
+[node name="Signboard" parent="." instance=ExtResource("18_43wsd")]
+position = Vector2(17, -221)
+label_text = "Password    Fortress"
+
+[node name="Signboard2" parent="." instance=ExtResource("18_43wsd")]
+position = Vector2(7, 369)
+label_text = "Firewall       Forest"
+
+[node name="Signboard3" parent="." instance=ExtResource("18_43wsd")]
+position = Vector2(318, 69)
+rotation = 1.53986
+label_text = "Encryption   Mountains"
 
 [connection signal="body_entered" from="forest_entry" to="." method="_on_forest_entry_body_entered"]
 [connection signal="body_exited" from="forest_entry" to="." method="_on_forest_entry_body_exited"]
