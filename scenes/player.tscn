@@ -426,3 +426,18 @@ limit_bottom = 400
 rotation_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="Health bar" type="ProgressBar" parent="."]
+modulate = Color(0.318249, 0.686507, 0.339504, 1)
+offset_left = -7.0
+offset_top = 6.0
+offset_right = 118.0
+offset_bottom = 33.0
+scale = Vector2(0.1, 0.1)
+show_percentage = false
+
+[node name="regin_timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="regin_timer" to="." method="_on_regin_timer_timeout"]

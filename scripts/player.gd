@@ -84,5 +84,12 @@ func current_camera():
 		$World_camera.enabled = false
 		$forest_camera.enabled = true
 		
+func update_health():
+	
+		
 		
 
+
+
+func _on_regin_timer_timeout():
+	pass # Replace with function body.
