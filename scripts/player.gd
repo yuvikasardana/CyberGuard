@@ -6,7 +6,8 @@ var curr_dir = "none"
 
 func _ready():
 	$AnimatedSprite2D.play("front_idle")
-	
+	$ProgressBar.value = health  # Initialize the health bar
+
 
 func _physics_process(delta):
 	player_movement(delta)
@@ -84,12 +85,27 @@ func current_camera():
 		$World_camera.enabled = false
 		$forest_camera.enabled = true
 		
-func update_health():
-	
-		
-		
+#func update_health():
+#func _on_regin_timer_timeout():
+	#pass # Replace with function body.
+
+var health = 100  # Initial health
+var max_health = 100
+
+func _on_ProximityZone_body_entered(body):
+	if body.is_in_group("enemies"):
+		decrease_health(20)
+
+func decrease_health(amount):
+	health -= amount
+	health = clamp(health, 0, max_health)  # Ensure health doesn't go below 0
+	$TextureProgress.value = health  # Update the health bar
+
+	if health == 0:
+		print("Player is dead!")  # You can trigger a game over or respawn logic here
 
 
 
-func _on_regin_timer_timeout():
-	pass # Replace with function body.
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("enemies"):
+		decrease_health(20)# Replace with function body.
